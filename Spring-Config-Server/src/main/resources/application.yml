@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: configuration-server
+    
+  cloud:
+    config:
+      git:
+        uri: https://github.com/amitpatil0714/olx-config
+        default-label: main
+        username: amitpatil0714
+        password: AMi@t2614
+        clone-on-start: true
+      server:
+        bootstrap: true
+        
+  main:
+    allow-circular-references: true
+  
+  profiles:
+    active: native  
